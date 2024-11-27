@@ -9,11 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let viewController: ListViewController = ListViewController()
+    @ObservedObject var viewController: ListViewController = ListViewController()
     
     var body: some View {
         VStack {
-           Text("Loading...")
+            if viewController.posts.isEmpty {
+                Text("Loading...")
+            }
+            else {
+                ForEach(viewController.posts) { post in
+                    Text(post.title)
+
+                }
+            }
         }
         .padding()
         .onAppear() {

@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, ObservableObject {
     
     let networkFetcher: NetworkFetcherProtocol
+    
+    @Published var posts: [PostModel] = []
     
     init(networkFetcher: NetworkFetcherProtocol = NetworkFetcher()) {
         self.networkFetcher = networkFetcher
@@ -25,7 +28,7 @@ class ListViewController: UIViewController {
         networkFetcher.fetchPost { result in
             switch result {
             case .success(let posts):
-                // TODO: Update to view
+                self.posts = posts
             case .failure(let error):
                 print("Failed to fetch posts: \(error.localizedDescription)")
             }
