@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let viewController: ListViewController = ListViewController()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+           Text("Loading...")
         }
         .padding()
+        .onAppear() {
+            viewController.loadPost()
+        }
     }
 }
 
