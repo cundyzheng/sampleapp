@@ -14,6 +14,7 @@
 		DF3690522CF7294600BBDA1A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3690512CF7294600BBDA1A /* ListViewController.swift */; };
 		DF3690542CF72A3500BBDA1A /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3690532CF72A3500BBDA1A /* NetworkFetcher.swift */; };
 		DF3690562CF72B1400BBDA1A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3690552CF72B1400BBDA1A /* PostModel.swift */; };
+		DF3690582CF736B300BBDA1A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3690572CF736B200BBDA1A /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		DF3690512CF7294600BBDA1A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DF3690532CF72A3500BBDA1A /* NetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcher.swift; sourceTree = "<group>"; };
 		DF3690552CF72B1400BBDA1A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		DF3690572CF736B200BBDA1A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +59,13 @@
 		DF3690422CF724C400BBDA1A /* simpleapp */ = {
 			isa = PBXGroup;
 			children = (
-				DF3690552CF72B1400BBDA1A /* PostModel.swift */,
+				DF36905C2CF736E400BBDA1A /* Service */,
+				DF36905B2CF736DF00BBDA1A /* Model */,
+				DF36905A2CF736D900BBDA1A /* View */,
+				DF3690592CF736D000BBDA1A /* ViewController */,
 				DF3690432CF724C400BBDA1A /* simpleappApp.swift */,
-				DF3690452CF724C400BBDA1A /* ContentView.swift */,
 				DF3690472CF724C800BBDA1A /* Assets.xcassets */,
 				DF3690492CF724C800BBDA1A /* Preview Content */,
-				DF3690512CF7294600BBDA1A /* ListViewController.swift */,
-				DF3690532CF72A3500BBDA1A /* NetworkFetcher.swift */,
 			);
 			path = simpleapp;
 			sourceTree = "<group>";
@@ -74,6 +76,39 @@
 				DF36904A2CF724C800BBDA1A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF3690592CF736D000BBDA1A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DF3690512CF7294600BBDA1A /* ListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DF36905A2CF736D900BBDA1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF3690572CF736B200BBDA1A /* ListView.swift */,
+				DF3690452CF724C400BBDA1A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF36905B2CF736DF00BBDA1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF3690552CF72B1400BBDA1A /* PostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF36905C2CF736E400BBDA1A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DF3690532CF72A3500BBDA1A /* NetworkFetcher.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +183,7 @@
 			files = (
 				DF3690462CF724C400BBDA1A /* ContentView.swift in Sources */,
 				DF3690562CF72B1400BBDA1A /* PostModel.swift in Sources */,
+				DF3690582CF736B300BBDA1A /* ListView.swift in Sources */,
 				DF3690442CF724C400BBDA1A /* simpleappApp.swift in Sources */,
 				DF3690542CF72A3500BBDA1A /* NetworkFetcher.swift in Sources */,
 				DF3690522CF7294600BBDA1A /* ListViewController.swift in Sources */,

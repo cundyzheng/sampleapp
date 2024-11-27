@@ -12,18 +12,19 @@ struct ContentView: View {
     @ObservedObject var viewController: ListViewController = ListViewController()
     
     var body: some View {
-        VStack {
-            if viewController.posts.isEmpty {
-                Text("Loading...")
-            }
-            else {
-                ForEach(viewController.posts) { post in
-                    Text(post.title)
-
+        ScrollView() {
+            VStack(spacing: 16.0) {
+                if viewController.posts.isEmpty {
+                    Text("Loading...")
+                }
+                else {
+                    ForEach(viewController.posts) { post in
+                        ListView(post)
+                    }
                 }
             }
+            .padding()
         }
-        .padding()
         .onAppear() {
             viewController.loadPost()
         }
