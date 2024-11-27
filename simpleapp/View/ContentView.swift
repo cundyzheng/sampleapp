@@ -34,8 +34,9 @@ struct ContentView: View {
             .onAppear() {
                 viewController.loadPost()
             }
+            .navigationTitle("News")
             .navigationDestination(for: PostModel.self) { post in
-                EmptyView()
+                DetailView(post)
             }
         }
     }
