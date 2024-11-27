@@ -10,23 +10,33 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var viewController: ListViewController = ListViewController()
+    @State private var navigateToDetail = false
     
     var body: some View {
-        ScrollView() {
-            VStack(spacing: 16.0) {
-                if viewController.posts.isEmpty {
-                    Text("Loading...")
-                }
-                else {
-                    ForEach(viewController.posts) { post in
-                        ListView(post)
+        NavigationStack {
+            ScrollView() {
+                VStack(spacing: 16.0) {
+                    if viewController.posts.isEmpty {
+                        Text("Loading...")
+                    }
+                    else {
+                        ForEach(viewController.posts) { post in
+                            
+                            NavigationLink(value: post) {
+                                ListView(post)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
                     }
                 }
+                .padding()
             }
-            .padding()
-        }
-        .onAppear() {
-            viewController.loadPost()
+            .onAppear() {
+                viewController.loadPost()
+            }
+            .navigationDestination(for: PostModel.self) { post in
+                EmptyView()
+            }
         }
     }
 }

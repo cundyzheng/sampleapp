@@ -5,7 +5,7 @@
 //  Created by Cundy Sunardy on 27/11/24.
 //
 
-struct PostModel: Codable, Identifiable {
+struct PostModel: Codable, Identifiable, Hashable {
     let id: Int
     let slug: String
     let url: String
